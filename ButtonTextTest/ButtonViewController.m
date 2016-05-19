@@ -26,7 +26,7 @@
     button.wantsLayer = YES;
     button.layer.backgroundColor = [NSColor colorWithRed:112.0f / 255 green:107.0f / 255 blue:151.0f / 255 alpha:1].CGColor;
     
-    NSAttributedString *attr = [[NSAttributedString alloc]initWithString:@"Hello" attributes:@{NSForegroundColorAttributeName: [NSColor clearColor], NSFontAttributeName: [NSFont systemFontOfSize:14]}];
+    NSAttributedString *attr = [[NSAttributedString alloc]initWithString:@"Hello" attributes:@{NSForegroundColorAttributeName: [NSColor whiteColor], NSFontAttributeName: [NSFont systemFontOfSize:14]}];
     button.attributedTitle = attr;
     [self.view addSubview:button];
 }
