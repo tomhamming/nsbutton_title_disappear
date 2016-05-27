@@ -17,14 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.webView setDrawsBackground:NO];
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"test" withExtension:@"html"];
-    [self.webView.mainFrame loadRequest:[NSURLRequest requestWithURL:url]];
+    self.view.wantsLayer = YES;
+//    [self.webView setDrawsBackground:NO];
+//    NSURL *url = [[NSBundle mainBundle] URLForResource:@"test" withExtension:@"html"];
+//    [self.webView.mainFrame loadRequest:[NSURLRequest requestWithURL:url]];
     
     NSButton *button = [[NSButton alloc]initWithFrame:NSMakeRect(0, 0, 100, 30)];
     button.bordered = NO;
     button.wantsLayer = YES;
-    button.layer.backgroundColor = [NSColor colorWithRed:112.0f / 255 green:107.0f / 255 blue:151.0f / 255 alpha:1].CGColor;
+    ((NSButtonCell *)button.cell).backgroundColor = [NSColor blueColor];
+    button.layer.backgroundColor = [NSColor blueColor].CGColor;
     
     NSAttributedString *attr = [[NSAttributedString alloc]initWithString:@"Hello" attributes:@{NSForegroundColorAttributeName: [NSColor whiteColor], NSFontAttributeName: [NSFont systemFontOfSize:14]}];
     button.attributedTitle = attr;
