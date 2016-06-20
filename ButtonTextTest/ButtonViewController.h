@@ -12,6 +12,4 @@
 
 @interface ButtonViewController : NSViewController
 
-@property (weak) IBOutlet WebView *webView;
-
 @end

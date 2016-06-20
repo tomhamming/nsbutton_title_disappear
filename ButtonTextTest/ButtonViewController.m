@@ -18,14 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.wantsLayer = YES;
-//    [self.webView setDrawsBackground:NO];
-//    NSURL *url = [[NSBundle mainBundle] URLForResource:@"test" withExtension:@"html"];
-//    [self.webView.mainFrame loadRequest:[NSURLRequest requestWithURL:url]];
     
     NSButton *button = [[NSButton alloc]initWithFrame:NSMakeRect(0, 0, 100, 30)];
-    button.bordered = NO;
     button.wantsLayer = YES;
-    ((NSButtonCell *)button.cell).backgroundColor = [NSColor blueColor];
+    button.bordered = NO;
     button.layer.backgroundColor = [NSColor blueColor].CGColor;
     
     NSAttributedString *attr = [[NSAttributedString alloc]initWithString:@"Hello" attributes:@{NSForegroundColorAttributeName: [NSColor whiteColor], NSFontAttributeName: [NSFont systemFontOfSize:14]}];
